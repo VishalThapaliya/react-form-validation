@@ -1,0 +1,32 @@
+.input-container {
+   display: flex;
+   flex-direction: column;
+   width: 300px;
+   margin-bottom: 10px;
+
+   label {
+    font-size: 14px;
+    font-weight: 600;
+   }
+
+   input {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid gray;
+
+    &:invalid[focused="true"] {
+        border: 2px solid red;
+    }
+
+    &:invalid[focused="true"] ~ .error-message {
+        display: block;
+    }
+   }
+
+   .error-message {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(236, 48, 48);
+    display: none;
+   }
+}
